@@ -2,7 +2,7 @@ import React from "react";
 
 type TaskType = {
     day: string
-    task: number
+    task: number | string
 }
 
 export const Task = (props: TaskType) => {
