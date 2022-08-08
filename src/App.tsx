@@ -12,6 +12,9 @@ import {Money} from "./monday-task1/money";
 import {Fullinput} from "./monday-task1/Task_6_input/Fullinput";
 import {Input} from "./monday-task1/Task_6_input/Input";
 import {ButtonInput} from "./monday-task1/Task_6_input/ButtonInput";
+import {FullMyselfInput} from "./monday-task1/Task_6_input/Inputs_myself/Full_myselfInput";
+import {ButtonInputMyself} from "./monday-task1/Task_6_input/Inputs_myself/ButtonInput-myself";
+import {InputMyself} from "./monday-task1/Task_6_input/Inputs_myself/InputMyself";
 
 
 function App() {
@@ -115,8 +118,10 @@ function App() {
         setMessage1([{message: title1}, ...message1])
         setTitle1('')
     }
+
     return (
         <>
+
             <>
                 <Task day={'MONDAY'} task={1}/>
                 <Header titleHeader={'Header-very good'}/>
@@ -152,6 +157,7 @@ function App() {
                     <Button name={'RUBLS'} callback={() => moneyFilterHandler('RUBLS')}></Button>
                     <Button name={'Dollars'} callback={() => moneyFilterHandler('Dollars')}></Button>
                 </div>
+                <br/>
             </>
             <>
                 <Task day={'MONDAY'} task={6}/>
@@ -164,6 +170,7 @@ function App() {
                 <Input title={title1} setTitle={setTitle1}/>
                 <ButtonInput name={'+'} callback={addMessage1}/>
                 {message1.map((m, i) => <div key={i + 1}>{m.message}</div>)}
+
 
             </>
 
